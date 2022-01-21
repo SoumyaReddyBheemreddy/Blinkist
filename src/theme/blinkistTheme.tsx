@@ -42,18 +42,22 @@ export const blinkistTheme = createTheme({
       fontSize: "16px",
       lineHeight: "24px",
       fontStyle: "normal",
-      fontWeight: "400",
+      fontWeight: "bold",
       color: "#6D787E",
     },
     caption: {
       fontFamily: "Cera Pro",
       fontStyle: "normal",
-      fontWeight: "400",
+      fontWeight: "normal",
       fontSize: "14px",
-      lineHeight: "22px",
+      lineHeight: "18px",
       verticalAlign: "top",
       color: "#6D787E",
+      
     },
+    button: {
+      textTransform: 'none'
+    }
   },
   components: {
     MuiPaper: {
@@ -71,7 +75,6 @@ export const blinkistTheme = createTheme({
           bottom: "0",
           width: "100%",
           height: "15px",
-
           boxSizing: "border-box",
 
           borderRadius: "0px 0px 8px 8px",
@@ -82,5 +85,26 @@ export const blinkistTheme = createTheme({
         },
       },
     },
+    MuiButton:{
+      styleOverrides:{
+        root:{
+          position: "absolute",
+          left: "0",
+          bottom: "0",
+          width: "100%",
+          fontSize:"16px",
+          boxSizing: "border-box",
+          padding: "14px 24px",
+          borderRadius: "0px 0px 8px 8px",
+          borderTop:"2px solid #E1ECFC"
+        },
+        text:{
+          "&:hover": {
+            color:"#FFFFFF",
+            backgroundColor: "#0365F2"
+          }
+        }
+      }
+    }
   },
 });

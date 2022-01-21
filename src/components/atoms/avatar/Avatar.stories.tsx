@@ -1,5 +1,5 @@
 import React from "react";
-import AvatarIcon from "./Avatar";
+import AvatarIcon from "./AvatarIcon";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 export default {
     title: 'Atoms/Avatar',

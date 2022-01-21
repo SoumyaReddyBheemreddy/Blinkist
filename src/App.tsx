@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import CoverPhoto from "./assets/cover_image/2.png";
-import Card from  "./components/molecule/card/Card"
+import Card from  "./components/molecule/card/BookCard"
 function App() {
   return (
     // <div className="App">

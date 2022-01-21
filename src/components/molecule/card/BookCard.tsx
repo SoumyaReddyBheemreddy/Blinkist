@@ -22,7 +22,7 @@ interface MediaCardProps {
   role: string;
 }
 
-export default function MediaCard(props: MediaCardProps) {
+export default function BookCard(props: MediaCardProps) {
   const classes = cardStyle();
   return (
     <ThemeProvider theme={blinkistTheme}>

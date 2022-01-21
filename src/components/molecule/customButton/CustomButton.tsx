@@ -1,7 +1,7 @@
 import React from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import Button from '@mui/material/Button';
-import TypographyTag from "../../atoms/typography/Typography";
+import TypographyTag from "../../atoms/typography/TypographyTag";
 interface CustomButtonProps{
     variant: "text" | "outlined" | "contained" 
 }

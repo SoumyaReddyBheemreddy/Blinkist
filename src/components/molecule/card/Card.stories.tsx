@@ -1,13 +1,13 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import MediaCard from "./Card";
+import Card from "./Card";
 import CoverPhoto from '../../../assets/cover_image/2.png'
 export default{
   title:"Molecules/Card",
-  component:MediaCard
-} as ComponentMeta<typeof MediaCard>
+  component:Card
+} as ComponentMeta<typeof Card>
 
-const Template: ComponentStory<typeof MediaCard> = args => <MediaCard {...args} />
+const Template: ComponentStory<typeof Card> = args => <Card {...args} />
 export const RestingCard = Template.bind({});
 RestingCard.args = {
   title:"Beyond Entreprenurship",

@@ -5,12 +5,7 @@ export const cardStyle = makeStyles((theme) => {
     bookcard: {
       height: "486px",
       width: "284px",
-      position: "absolute",
-      left: "0%",
-      right: "0%",
-      top: "0%",
-      bottom: "0%",
-
+      position: "relative",
       /* White */
 
       background: "#FFFFFF",
@@ -18,7 +13,6 @@ export const cardStyle = makeStyles((theme) => {
 
       borderRadius: "8px",
       boxSizing: "border-box",
-      margin: "5% auto",
     },
     cardmedia: {
       height: "292px",

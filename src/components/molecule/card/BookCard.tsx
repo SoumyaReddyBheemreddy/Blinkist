@@ -20,17 +20,18 @@ interface MediaCardProps {
   userCount:string;
   progress?: number;
   role: string;
+  onClick?:()=>void;
 }
 
 export default function BookCard(props: MediaCardProps) {
   const classes = cardStyle();
   return (
     <ThemeProvider theme={blinkistTheme}>
-      <Card className={classes.bookcard}>
+      <Card className={classes.bookcard} onClick={props.onClick}>
         <CardMedia
           className={classes.cardmedia}
           component="img"
-          image={props.image}
+          image={process.env.PUBLIC_URL+props.image}
           alt={props.title}
         />
         <CardContent>
@@ -64,10 +65,10 @@ export default function BookCard(props: MediaCardProps) {
             </div>
           </div>
 
-          {props.role === "current" && (
+          {props.role === "currently reading" && (
             <MoreHorizIcon className={classes.moreicon} />
           )}
-          {props.role === "read again" && (
+          {props.role === "finished" && (
             <Link sx={{color:"#0365F2"}}
               className={classes.link}
               underline="hover"
@@ -75,14 +76,7 @@ export default function BookCard(props: MediaCardProps) {
               Read Again
             </Link>
           )}
-          {props.role === "currently reading" && (
-            <Link sx={{color:"#0365F2"}}
-              className={classes.link}
-              underline="hover"
-            >
-              Finished
-            </Link>
-          )}
+          
         </CardContent>
 
         {props.role !== "explore" && (

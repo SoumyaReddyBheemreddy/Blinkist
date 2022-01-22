@@ -5,12 +5,15 @@ import Tab from "@mui/material/Tab";
 import { ThemeProvider } from "@mui/material/styles";
 import { blinkistTheme } from "../../../theme/blinkistTheme";
 import { ListTabsStyle } from "./ListTabsStyle";
-interface ListTabsProps {}
+interface ListTabsProps {
+  stateHandler : (arg:string)=>void
+}
 export default function ListTabs(props: ListTabsProps) {
   const [value, setValue] = React.useState("currently reading");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
+    props.stateHandler && props.stateHandler(newValue);
   };
   const classes = ListTabsStyle();
   return (

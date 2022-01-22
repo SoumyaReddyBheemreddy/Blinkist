@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Beyond Entreprenurship",
+      "author": "Jim Collins & Bill Lazier",
+      "image": "/assets/cover_image/2.png",
+      "readingTime": "13 minute read",
+      "userCount": "19k reads",
+      "progress": 55,
+      "role": "currently reading"
+    },
+    {
+        "id": 2,
+        "title": "Beyond Entreprenurship",
+        "author": "Jim Collins & Bill Lazier",
+        "image": "/assets/cover_image/2.png",
+        "readingTime": "13 minute read",
+        "userCount": "19k reads",
+        "progress": 100,
+        "role": "finished"
+      }
+  ]
+}

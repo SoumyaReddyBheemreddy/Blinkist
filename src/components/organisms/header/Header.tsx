@@ -12,7 +12,7 @@ import Link from "@mui/material/Link";
 interface HeaderProps {}
 export default function Header(props: HeaderProps) {
   return (
-    <AppBar position="static" sx={{background:"#FFFFFF"}}>
+    <AppBar position="static" sx={{background:"#FFFFFF",boxShadow:"none"}}>
       <Toolbar>
         <Logo />
         <Box sx={{ flexGrow: 1, display: "flex" }}>
@@ -40,7 +40,14 @@ export default function Header(props: HeaderProps) {
         </Box>
 
         <AvatarIcon children="A" />
-        <ExpandMoreIcon />
+        <IconButton
+            size="large"
+            edge="start"
+            aria-label="more"
+            sx={{color:" #042330" }}
+            
+          > <ExpandMoreIcon /></IconButton>
+       
       </Toolbar>
     </AppBar>
   );

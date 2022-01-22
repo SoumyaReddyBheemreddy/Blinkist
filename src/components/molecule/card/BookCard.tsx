@@ -36,7 +36,7 @@ export default function BookCard(props: MediaCardProps) {
         />
         <CardContent>
           <Typography
-            sx={{ paddingTop: "7px" }}
+            sx={{ paddingTop: "7px",fontSize:"18px" }}
             gutterBottom
             variant="subtitle1"
             component="div"

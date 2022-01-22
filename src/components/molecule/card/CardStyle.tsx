@@ -17,6 +17,7 @@ export const cardStyle = makeStyles((theme) => {
     cardmedia: {
       height: "292px",
       width: "294.1px",
+      
     },
     statusView:{
         display:"flex"
@@ -54,7 +55,7 @@ export const cardStyle = makeStyles((theme) => {
         left: "14.08%",
         top: "82.83%",
         bottom: "13.3%",
-      
+        
     },
     moreicon: {
         paddingTop:"15px",

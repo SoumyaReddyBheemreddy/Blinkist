@@ -4,8 +4,8 @@ import Typography from "../../atoms/typography/TypographyTag";
 import Tab from "../../molecule/tab/ListTabs";
 import Card from "../../molecule/card/BookCard";
 import CircularProgress from "@mui/material/CircularProgress";
-import TabContext from '@mui/lab/TabContext';
-import TabPanel from '@mui/lab/TabPanel';
+import TabContext from "@mui/lab/TabContext";
+import TabPanel from "@mui/lab/TabPanel";
 import { makeStyles } from "@mui/styles";
 import { useNavigate } from "react-router-dom";
 interface Book {
@@ -28,7 +28,7 @@ const MyLibrary = () => {
   const classes = useStyles();
   const navigate = useNavigate();
   const [data, setData] = useState<Book[]>([]);
-  const [currentState, setCurrState] = useState("currently reading");
+  const [currentState, setCurrentState] = useState("currently reading");
   useEffect(() => {
     const processor = async () => {
       let response = await fetch("http://localhost:8086/books");
@@ -38,51 +38,48 @@ const MyLibrary = () => {
     processor();
   }, []);
   const handleState = (state: string) => {
-    setCurrState(state);
+    setCurrentState(state);
   };
 
   const cards = () => {
-    console.log(data);
-    let currentlyReading = data.filter((book) => book.role === "currently reading");
+    let currentlyReading = data.filter(
+      (book) => book.role === "currently reading"
+    );
 
     let finishedReading = data.filter((book) => book.role === "finished");
-    if (data == null) {
-      return <CircularProgress />;
+    if (currentState === "currently reading") {
+      return currentlyReading.map((currData: Book) => {
+        return (
+          <Card
+            key={currData.id}
+            title={currData.title}
+            author={currData.author}
+            image={currData.image}
+            readingTime={currData.readingTime}
+            userCount={currData.userCount}
+            role={currData.role}
+            progress={currData.progress}
+          />
+        );
+      });
     } else {
-      if (currentState === "currently reading") {
-        return currentlyReading.map((currData: Book) => {
-          return (
-            <Card
-              key={currData.id}
-              title={currData.title}
-              author={currData.author}
-              image={currData.image}
-              readingTime={currData.readingTime}
-              userCount={currData.userCount}
-              role={currData.role}
-              progress={currData.progress}
-            />
-          );
-        });
-      } else {
-        return finishedReading.map((currData: Book) => {
-          return (
-            <Card
-              key={currData.id}
-              title={currData.title}
-              author={currData.author}
-              image={currData.image}
-              readingTime={currData.readingTime}
-              userCount={currData.userCount}
-              role={currData.role}
-              progress={currData.progress}
-              onClick={() => {
-                navigate("/book");
-              }}
-            />
-          );
-        });
-      }
+      return finishedReading.map((currData: Book) => {
+        return (
+          <Card
+            key={currData.id}
+            title={currData.title}
+            author={currData.author}
+            image={currData.image}
+            readingTime={currData.readingTime}
+            userCount={currData.userCount}
+            role={currData.role}
+            progress={currData.progress}
+            onClick={() => {
+              navigate("/book");
+            }}
+          />
+        );
+      });
     }
   };
   return (
@@ -91,11 +88,10 @@ const MyLibrary = () => {
         <Typography variant="h1" children="My Library" />
       </div>
       <TabContext value={currentState}>
-      <Tab stateHandler={handleState} />
-      <TabPanel value="currently reading">{cards()}</TabPanel>
-      <TabPanel value="finished">{cards()}</TabPanel>
+        <Tab stateHandler={handleState} />
+        <TabPanel value="currently reading">{cards()}</TabPanel>
+        <TabPanel value="finished">{cards()}</TabPanel>
       </TabContext>
-     
     </Container>
   );
 };

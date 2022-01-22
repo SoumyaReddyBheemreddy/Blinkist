@@ -68,7 +68,7 @@ export default function BookCard(props: MediaCardProps) {
             <MoreHorizIcon className={classes.moreicon} />
           )}
           {props.role === "read again" && (
-            <Link
+            <Link sx={{color:"#0365F2"}}
               className={classes.link}
               underline="hover"
             >
@@ -76,7 +76,7 @@ export default function BookCard(props: MediaCardProps) {
             </Link>
           )}
           {props.role === "currently reading" && (
-            <Link
+            <Link sx={{color:"#0365F2"}}
               className={classes.link}
               underline="hover"
             >

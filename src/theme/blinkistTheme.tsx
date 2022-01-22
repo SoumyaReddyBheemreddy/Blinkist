@@ -1,6 +1,15 @@
 import { createTheme } from "@mui/material/styles";
+import { typography } from "@mui/system";
 
 export const blinkistTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#22C870",
+    },
+    secondary: {
+      main: "#0365F2",
+    },
+  },
   typography: {
     h1: {
       fontFamily: "Cera Pro",
@@ -30,8 +39,8 @@ export const blinkistTheme = createTheme({
       fontSize: "24px",
       lineHeight: "32px",
     },
-    body1:{
-        fontFamily: "Cera Pro",
+    body1: {
+      fontFamily: "Cera Pro",
       fontStyle: "normal",
       fontWeight: "700",
       fontSize: "16px",
@@ -53,11 +62,10 @@ export const blinkistTheme = createTheme({
       lineHeight: "18px",
       verticalAlign: "top",
       color: "#6D787E",
-      
     },
     button: {
-      textTransform: 'none'
-    }
+      textTransform: "none",
+    },
   },
   components: {
     MuiPaper: {
@@ -85,26 +93,41 @@ export const blinkistTheme = createTheme({
         },
       },
     },
-    MuiButton:{
-      styleOverrides:{
-        root:{
+    MuiButton: {
+      styleOverrides: {
+        root: {
           position: "absolute",
           left: "0",
           bottom: "0",
           width: "100%",
-          fontSize:"16px",
+          fontSize: "16px",
           boxSizing: "border-box",
           padding: "14px 24px",
           borderRadius: "0px 0px 8px 8px",
-          borderTop:"2px solid #E1ECFC"
+          borderTop: "2px solid #E1ECFC",
         },
-        text:{
+        text: {
           "&:hover": {
-            color:"#FFFFFF",
-            backgroundColor: "#0365F2"
-          }
-        }
-      }
-    }
+            color: "#FFFFFF",
+            backgroundColor: "#0365F2",
+          },
+        },
+      },
+    },
+
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          color: "#6D787E",
+          
+        },
+
+        textColorPrimary: {
+          "&:hover": {
+            color: "#20BA68",
+          },
+        },
+      },
+    },
   },
 });

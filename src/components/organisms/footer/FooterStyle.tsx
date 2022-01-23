@@ -1,10 +1,14 @@
 import { makeStyles } from "@mui/styles";
 export const FooterStyle = makeStyles({
   main: {
-    padding: "24px 24px 24px 244px",
     backgroundColor: "#F1F6F4",
+    width:"100%"
   },
   display:{
-      display:"flex"
+    display: "flex",
+
+    alignItems: "center",
+    backgroundColor: "#F1F6F4",
+     
   }
 });

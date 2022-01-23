@@ -14,8 +14,9 @@ export const cardStyle = makeStyles((theme) => {
       borderRadius: "8px",
       boxSizing: "border-box",
     },
+
     cardmedia: {
-      height: "292px",
+    
       width: "294.1px",
       
     },

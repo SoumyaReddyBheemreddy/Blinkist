@@ -9,45 +9,51 @@ import AvatarIcon from "../../atoms/avatar/AvatarIcon";
 import Logo from "../../atoms/logo/Logo";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Link from "@mui/material/Link";
-interface HeaderProps {}
-export default function Header(props: HeaderProps) {
+import { makeStyles } from "@mui/styles";
+const useStyle = makeStyles({
+  appBar:{
+    "& .MuiToolbar-root":{
+      paddingLeft:"0px"
+    }
+  }
+});
+export default function Header() {
+  const classes = useStyle();
   return (
-    <AppBar position="static" sx={{background:"#FFFFFF",boxShadow:"none"}}>
-      <Toolbar>
+    <AppBar position="static" sx={{ background: "#FFFFFF" }} elevation={0} className={classes.appBar}>
+      <Toolbar >
         <Logo />
-        <Box sx={{ flexGrow: 1, display: "flex" }}>
+
+        <Box sx={{ flexGrow: 1, display: { xs: "flex" } }}>
           <IconButton
             size="large"
             edge="start"
-           
             aria-label="search"
-            sx={{ ml: 4, alignSelf: "center",color:" #042330" }}
-            
+            sx={{ ml: 4, alignSelf: "center", color: " #042330" }}
           >
             <SearchIcon />
           </IconButton>
-         
+
           <Link
             href="#"
             sx={{ ml: 4, alignSelf: "center" }}
-           
             underline="hover"
             color=" #042330"
           >
-            <TypographyTag children='My Library' variant='body1' />
-            
+            <TypographyTag  children="My Library" variant="body1" />
           </Link>
         </Box>
-
-        <AvatarIcon children="A" />
-        <IconButton
+        <Box sx={{ flexGrow: 0,display: { xs: "flex" }  }}>
+          <AvatarIcon children="A" />
+          <IconButton
             size="large"
             edge="start"
             aria-label="more"
-            sx={{color:" #042330" }}
-            
-          > <ExpandMoreIcon /></IconButton>
-       
+            sx={{ color: " #042330"}}
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+        </Box>
       </Toolbar>
     </AppBar>
   );

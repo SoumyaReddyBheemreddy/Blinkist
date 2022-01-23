@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
-import CoverPhoto from "./assets/cover_image/2.png";
-import Card from  "./components/molecule/card/BookCard";
-import ListTabs from "./components/molecule/tab/ListTabs";
-import Footer from "./components/organisms/footer/Footer";
+import MyLibrary from './components/organisms/MyLibrary/MyLibrary';
+import Template from './components/template/Template';
+import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     // <div className="App">
@@ -33,7 +32,9 @@ function App() {
        
     //   />
     // <ListTabs />
-    <Footer />
+    // <Footer />
+    <BrowserRouter> <Template><MyLibrary /></Template></BrowserRouter>
+   
   );
 }
 

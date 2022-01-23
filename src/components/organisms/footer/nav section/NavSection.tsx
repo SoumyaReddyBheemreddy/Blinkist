@@ -8,7 +8,7 @@ export default function NavSection(){
         <Box sx={{display: "flex"}}>
             <Box sx={{width:"214px"}}><NavItem title="Editorial" items={editorialList}  /></Box>
             <Box sx={{width:"214px"}}><NavItem title="Useful Link" items={usefulLinks}  /></Box>
-            <Box sx={{width:"73px"}}><NavItem title="Company" items={companyLink} /></Box>   
+            <Box sx={{width:"214x"}}><NavItem title="Company" items={companyLink} /></Box>   
         </Box>
     );
 }

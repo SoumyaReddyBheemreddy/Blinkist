@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-import { Container, Box } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import Typography from "../../atoms/typography/TypographyTag";
 import Tab from "../../molecule/tab/ListTabs";
 import Card from "../../molecule/card/BookCard";
-import CircularProgress from "@mui/material/CircularProgress";
 import TabContext from "@mui/lab/TabContext";
 import TabPanel from "@mui/lab/TabPanel";
 import { makeStyles } from "@mui/styles";
@@ -21,19 +20,23 @@ interface Book {
 const MyLibrary = () => {
   const useStyles = makeStyles({
     title: {
-      marginBottom: "30px",
-      marginLeft: "10px",
+      marginBottom: "60px",
+      marginTop: "89px"
     },
   });
   const classes = useStyles();
   const navigate = useNavigate();
-  const [data, setData] = useState<Book[]>([]);
+  const [currentReadingBooks, setCurrentReadingBooks] = useState<Book[]>([]);
+  const [finishedBooks, setFinishedBooks] = useState<Book[]>([]);
   const [currentState, setCurrentState] = useState("currently reading");
   useEffect(() => {
     const processor = async () => {
       let response = await fetch("http://localhost:8086/books");
       let result = await response.json();
-      setData(result);
+      setCurrentReadingBooks(
+        result.filter((book: Book) => book.role === "currently reading")
+      );
+      setFinishedBooks(result.filter((book: Book) => book.role === "finished"));
     };
     processor();
   }, []);
@@ -41,58 +44,54 @@ const MyLibrary = () => {
     setCurrentState(state);
   };
 
-  const cards = () => {
-    let currentlyReading = data.filter(
-      (book) => book.role === "currently reading"
-    );
-
-    let finishedReading = data.filter((book) => book.role === "finished");
-    if (currentState === "currently reading") {
-      return currentlyReading.map((currData: Book) => {
-        return (
+  const cards = (books: Book[]) => {
+    return books.map((book: Book,index) => {
+      return (
+        <Grid key={index} item xs={12} sm={12} md={6} lg={4}>
           <Card
-            key={currData.id}
-            title={currData.title}
-            author={currData.author}
-            image={currData.image}
-            readingTime={currData.readingTime}
-            userCount={currData.userCount}
-            role={currData.role}
-            progress={currData.progress}
-          />
-        );
-      });
-    } else {
-      return finishedReading.map((currData: Book) => {
-        return (
-          <Card
-            key={currData.id}
-            title={currData.title}
-            author={currData.author}
-            image={currData.image}
-            readingTime={currData.readingTime}
-            userCount={currData.userCount}
-            role={currData.role}
-            progress={currData.progress}
+            key={book.id}
+            title={book.title}
+            author={book.author}
+            image={book.image}
+            readingTime={book.readingTime}
+            userCount={book.userCount}
+            role={book.role}
+            progress={book.progress}
             onClick={() => {
               navigate("/book");
             }}
           />
-        );
-      });
-    }
+        </Grid>
+      );
+    });
   };
   return (
-    <Container>
+    <div>
       <div className={classes.title}>
         <Typography variant="h1" children="My Library" />
       </div>
       <TabContext value={currentState}>
         <Tab stateHandler={handleState} />
-        <TabPanel value="currently reading">{cards()}</TabPanel>
-        <TabPanel value="finished">{cards()}</TabPanel>
+        <TabPanel value="currently reading">
+          <Grid
+            container
+            rowSpacing={3}
+           
+          >
+            {cards(currentReadingBooks)}
+          </Grid>
+        </TabPanel>
+        <TabPanel value="finished">
+          <Grid
+            container
+            rowSpacing={3}
+            columnSpacing={{ xs: 1, sm: 2, md: 2 }}
+          >
+            {cards(finishedBooks)}
+          </Grid>
+        </TabPanel>
       </TabContext>
-    </Container>
+    </div>
   );
 };
 

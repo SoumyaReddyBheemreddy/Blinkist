@@ -40,7 +40,7 @@ export const cardStyle = makeStyles((theme) => {
       },
     },
     userIcon:{
-         paddingLeft:"53px",
+         paddingLeft:"47px",
         "&.MuiSvgIcon-root": {
             left: "16.67%",
             right: "16.67%",
@@ -60,7 +60,7 @@ export const cardStyle = makeStyles((theme) => {
     },
     moreicon: {
         paddingTop:"15px",
-        marginLeft: "90%",
+        marginLeft: "87%",
       
     },
     link:{

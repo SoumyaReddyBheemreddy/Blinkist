@@ -31,6 +31,13 @@ export default function Footer() {
           
           <NavSection />
         </Box>
+        <Box sx={{padding:"38px 0px"}}>
+          <TypographyTag
+
+              children="© Blinkist 2021 Sitemap   |   Imprint   |   Terms of Service   |   Privacy Policies"
+              variant="caption"
+            />
+          </Box>
       </Container>
     </div>
   );

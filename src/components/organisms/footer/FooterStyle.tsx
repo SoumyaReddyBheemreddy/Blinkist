@@ -5,7 +5,5 @@ export const FooterStyle = makeStyles((theme)=>{
     backgroundColor: "#F1F6F4",
     width:"100%"
   },
-  display:{
-    alignItems: "center",
-  }}
+ }
 });

@@ -8,8 +8,8 @@ export default function Footer() {
   const classes = FooterStyle();
   return (
     <div className={classes.main}>
-      <Container>
-        <Box className={classes.display} sx={{display:{sm:"block",md:"flex"}}}>
+      <Container >
+        <Box  sx={{display:{sm:"block",md:"flex"},paddingTop:"32px"}}>
           <Box sx={{ margin: "16px 0px", width: "378px" }}>
             <Box>
               <Logo />
@@ -28,7 +28,7 @@ export default function Footer() {
               variant="subtitle1"
             />
           </Box>
-
+          
           <NavSection />
         </Box>
       </Container>

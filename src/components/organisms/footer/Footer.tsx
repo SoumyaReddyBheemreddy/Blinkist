@@ -7,9 +7,9 @@ import { Container } from "@mui/material";
 export default function Footer() {
   const classes = FooterStyle();
   return (
-    <div className={classes.display}>
+    <div className={classes.main}>
       <Container>
-        <Box className={classes.display}>
+        <Box className={classes.display} sx={{display:{sm:"block",md:"flex"}}}>
           <Box sx={{ margin: "16px 0px", width: "378px" }}>
             <Box>
               <Logo />

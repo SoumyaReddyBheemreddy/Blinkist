@@ -30,7 +30,7 @@ const MyLibrary = () => {
   const [finishedBooks, setFinishedBooks] = useState<Book[]>([]);
   const [currentState, setCurrentState] = useState("currently reading");
   useEffect(() => {
-    const processor = async () => {
+    const fetchBooks = async () => {
       let response = await fetch("http://localhost:8086/books");
       let result = await response.json();
       setCurrentReadingBooks(
@@ -38,8 +38,8 @@ const MyLibrary = () => {
       );
       setFinishedBooks(result.filter((book: Book) => book.role === "finished"));
     };
-    processor();
-  }, []);
+    fetchBooks();
+  },[]);
   const handleState = (state: string) => {
     setCurrentState(state);
   };

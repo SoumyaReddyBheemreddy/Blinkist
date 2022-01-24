@@ -30,7 +30,7 @@ export default function BookCard(props: MediaCardProps) {
   return (
     <ThemeProvider theme={blinkistTheme}>
       <Card className={classes.bookcard} onClick={props.onClick}>
-        <CardActionArea>
+        <CardActionArea disableRipple= {true} >
           <CardMedia
             className={classes.cardmedia}
             component="img"

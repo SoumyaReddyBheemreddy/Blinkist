@@ -8,6 +8,7 @@ import IconButton from "@mui/material/IconButton";
 import AvatarIcon from "../../atoms/avatar/AvatarIcon";
 import Logo from "../../atoms/logo/Logo";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Explore from "../explore/Explore";
 import Link from "@mui/material/Link";
 import { makeStyles } from "@mui/styles";
 const useStyle = makeStyles({
@@ -33,7 +34,7 @@ export default function Header() {
           >
             <SearchIcon />
           </IconButton>
-
+          <Explore />
           <Link
             href="#"
             sx={{ ml: 4, alignSelf: "center" }}

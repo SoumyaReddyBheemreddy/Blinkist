@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { ThemeProvider } from "@mui/material/styles";
 import { blinkistTheme } from "../../../theme/blinkistTheme";
 interface TypographyTagProps{
-    children:string,
+    children:any,
     variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "subtitle1" | "subtitle2" | "body1" | "body2" | "caption" | "button" | "overline" | "inherit",
     className?:string,
     sx?:any

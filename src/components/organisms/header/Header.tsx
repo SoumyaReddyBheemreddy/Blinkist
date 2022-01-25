@@ -30,7 +30,7 @@ export default function Header() {
             size="large"
             edge="start"
             aria-label="search"
-            sx={{ ml: 4, alignSelf: "center", color: " #042330" }}
+            sx={{ ml: 4,mx:4, alignSelf: "center", color: " #042330" }}
           >
             <SearchIcon />
           </IconButton>

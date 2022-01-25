@@ -14,25 +14,25 @@ import {
 } from "react-icons/md";
 import { TiShoppingBag } from "react-icons/ti";
 import {
-    RiPsychotherapyLine,
-    RiLeafLine,
-    RiLightbulbFlashLine,
-    RiHeartsLine
-  } from "react-icons/ri";
-  import { GiSandsOfTime } from "react-icons/gi";
-  import { FiTarget } from "react-icons/fi";
-  
+  RiPsychotherapyLine,
+  RiLeafLine,
+  RiLightbulbFlashLine,
+  RiHeartsLine,
+} from "react-icons/ri";
+import { GiSandsOfTime } from "react-icons/gi";
+import { FiTarget } from "react-icons/fi";
 const useStyle = makeStyles({
   button: {
     display: "flex",
     alignItems: "center",
     color: "#042330",
-    fontFamily : "Cera Pro",
-    fontSize :"16px",
-    lineHeight:"20px",
+    fontFamily: "Cera Pro",
+    fontSize: "16px",
+    lineHeight: "20px",
+
     "&:hover": {
       color: "#0365F2",
-      "& .MuiTypography-root:hover": {
+      "& .MuiTypography-root": {
         color: "#0365F2",
       },
     },
@@ -42,14 +42,18 @@ const useStyle = makeStyles({
 export default function ExploreGridItems() {
   const classes = useStyle();
   return (
-    <Grid container style={{ flexWrap: "nowrap" }}>
+    <Grid container sx={{ flexWrap: { md: "nowrap", xs: "wrap" } }}>
       <Grid item container direction="column">
         <Grid item>
           <Link className={classes.button} underline="none">
             <AiOutlineRocket
-              style={{ paddingRight: "12px", height: "22.05px", width: "16px" }}
+              style={{
+                paddingRight: "12px",
+                height: "22.05px",
+                width: "16px",
+              }}
             />
-            Explore
+            <TypographyTag variant="body2" children="Entrepreneurship" />
           </Link>
         </Grid>
         <Grid item>
@@ -62,7 +66,7 @@ export default function ExploreGridItems() {
         </Grid>
         <Grid item>
           <Link className={classes.button} underline="none">
-            <FaGlobeAsia 
+            <FaGlobeAsia
               style={{ paddingRight: "12px", height: "22.05px", width: "16px" }}
             />
             <TypographyTag variant="body2" children="Economics" />
@@ -70,7 +74,7 @@ export default function ExploreGridItems() {
         </Grid>
         <Grid item>
           <Link className={classes.button} underline="none">
-            <TiShoppingBag 
+            <TiShoppingBag
               style={{ paddingRight: "12px", height: "22.05px", width: "16px" }}
             />
             <TypographyTag variant="body2" children="Corporate Culture" />
@@ -123,7 +127,10 @@ export default function ExploreGridItems() {
             <RiLightbulbFlashLine
               style={{ paddingRight: "12px", height: "22.05px", width: "16px" }}
             />
-            <TypographyTag variant="body2" children="Motivation & Inspiration" />
+            <TypographyTag
+              variant="body2"
+              children="Motivation & Inspiration"
+            />
           </Link>
         </Grid>
         <Grid item>
@@ -162,7 +169,7 @@ export default function ExploreGridItems() {
         </Grid>
         <Grid item>
           <Link className={classes.button} underline="none">
-            <BiCommentDots 
+            <BiCommentDots
               style={{ paddingRight: "12px", height: "22.05px", width: "16px" }}
             />
             <TypographyTag variant="body2" children="History" />
@@ -173,7 +180,10 @@ export default function ExploreGridItems() {
             <MdOutlineAccountBalanceWallet
               style={{ paddingRight: "12px", height: "22.05px", width: "16px" }}
             />
-            <TypographyTag variant="body2" children="Motivation & Inspiration" />
+            <TypographyTag
+              variant="body2"
+              children="Motivation & Inspiration"
+            />
           </Link>
         </Grid>
         <Grid item>
@@ -186,7 +196,7 @@ export default function ExploreGridItems() {
         </Grid>
         <Grid item>
           <Link className={classes.button} underline="none">
-            <MdOutlineSchool 
+            <MdOutlineSchool
               style={{ paddingRight: "12px", height: "22.05px", width: "16px" }}
             />
             <TypographyTag variant="body2" children="Career & Success" />

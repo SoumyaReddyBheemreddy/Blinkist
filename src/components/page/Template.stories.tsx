@@ -1,12 +1,12 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import Template from './Template';
+import MyLibraryPage from './MyLibraryPage';
 import {BrowserRouter} from 'react-router-dom'
 import MyLibrary from "../organisms/MyLibrary/MyLibrary";
 export default{
-    title:"Template",
-    compontent:Template
-}as ComponentMeta<typeof Template>
-const template:ComponentStory<typeof Template> = (args)=> <BrowserRouter><Template {...args}/></BrowserRouter>
+    title:"Pages/MyLibraryPage",
+    compontent:MyLibraryPage
+}as ComponentMeta<typeof MyLibraryPage>
+const template:ComponentStory<typeof MyLibraryPage> = (args)=> <BrowserRouter><MyLibraryPage {...args}/></BrowserRouter>
 export const page = template.bind({})
 page.args ={
     children : <MyLibrary />

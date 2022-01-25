@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import BookCard from "./BookCard";
 const CoverPhoto = "/assets/cover_image/2.png";
 export default{
-  title:"Molecules/BookCard",
+  title:"Molecule/BookCard",
   component:BookCard
 } as ComponentMeta<typeof BookCard>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import MyLibrary from './components/organisms/MyLibrary/MyLibrary';
-import Template from './components/template/Template';
+import Template from './components/page/MyLibraryPage';
 import { BrowserRouter } from "react-router-dom";
 function App() {
   return (

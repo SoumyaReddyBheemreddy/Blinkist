@@ -44,6 +44,7 @@ export const blinkistTheme = createTheme({
       fontWeight: "700",
       fontSize: "16px",
       lineHeight: "24px",
+      
     },
     body2: {
       fontFamily: "Cera Pro",
@@ -101,7 +102,7 @@ export const blinkistTheme = createTheme({
           width: "100%",
           fontSize: "16px",
           boxSizing: "border-box",
-          padding: "14px 24px",
+          padding: "10px 24px",
           borderRadius: "0px 0px 8px 8px",
           borderTop: "2px solid #E1ECFC",
         },

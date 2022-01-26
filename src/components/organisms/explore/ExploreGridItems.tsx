@@ -25,11 +25,12 @@ const useStyle = makeStyles({
   button: {
     display: "flex",
     alignItems: "center",
-    color: "#042330",
     fontFamily: "Cera Pro",
     fontSize: "16px",
     lineHeight: "20px",
-
+    "&.MuiLink-root":{
+      color: "#042330",
+    },
     "&:hover": {
       color: "#0365F2",
       "& .MuiTypography-root": {

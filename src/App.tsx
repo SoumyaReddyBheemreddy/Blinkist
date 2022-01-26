@@ -2,7 +2,8 @@ import React from 'react';
 import './App.css';
 import MyLibrary from './components/organisms/MyLibrary/MyLibrary';
 import Template from './components/page/MyLibraryPage';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter,Routes, Route } from "react-router-dom";
+import BookView from './components/organisms/bookView/BookView';
 function App() {
   return (
     // <div className="App">
@@ -33,7 +34,12 @@ function App() {
     //   />
     // <ListTabs />
     // <Footer />
-    <BrowserRouter> <Template><MyLibrary /></Template></BrowserRouter>
+    <BrowserRouter>
+    <Routes>
+    <Route path="/book" element={<BookView />}></Route>
+    </Routes>
+    
+     <Template><MyLibrary /></Template></BrowserRouter>
    
   );
 }

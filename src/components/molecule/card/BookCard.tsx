@@ -13,7 +13,6 @@ import LinearProgress from "@mui/material/LinearProgress";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import Link from "@mui/material/Link";
 import CustomButton from "../customButton/CustomButton";
-
 interface MediaCardProps {
   title: string;
   author: string;
@@ -30,7 +29,7 @@ export default function BookCard(props: MediaCardProps) {
   return (
     <ThemeProvider theme={blinkistTheme}>
       <Card className={classes.bookcard} onClick={props.onClick}>
-        <CardActionArea disableRipple= {true} >
+        <CardActionArea disableRipple= {true} sx={{padding:"0px"}}>
           <CardMedia
             className={classes.cardmedia}
             component="img"
@@ -90,8 +89,10 @@ export default function BookCard(props: MediaCardProps) {
         )}
         {props.role === "explore" && (
           <CardActions>
-            <CustomButton variant="text" />
+              <CustomButton variant="text" />
           </CardActions>
+            
+          
         )}
       </Card>
     </ThemeProvider>

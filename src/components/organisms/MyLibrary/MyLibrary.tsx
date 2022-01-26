@@ -7,6 +7,8 @@ import TabContext from "@mui/lab/TabContext";
 import TabPanel from "@mui/lab/TabPanel";
 import { makeStyles } from "@mui/styles";
 import { useNavigate } from "react-router-dom";
+import { Container } from "@mui/material";
+import axios from "axios";
 interface Book {
   id: number;
   title: string;
@@ -31,8 +33,8 @@ const MyLibrary = () => {
   const [currentState, setCurrentState] = useState("currently reading");
   useEffect(() => {
     const fetchBooks = async () => {
-      let response = await fetch("http://localhost:8086/books");
-      let result = await response.json();
+      let response = await axios.get("http://localhost:8086/books").then();
+      let result = await response.data;
       setCurrentReadingBooks(
         result.filter((book: Book) => book.role === "currently reading")
       );
@@ -58,7 +60,7 @@ const MyLibrary = () => {
             role={book.role}
             progress={book.progress}
             onClick={() => {
-              navigate("/book");
+              navigate("/book?id="+book.id);
             }}
           />
         </Grid>
@@ -66,7 +68,7 @@ const MyLibrary = () => {
     });
   };
   return (
-    <div>
+    <Container fixed>
       <div className={classes.title}>
         <Typography variant="h1" children="My Library" />
       </div>
@@ -91,7 +93,7 @@ const MyLibrary = () => {
           </Grid>
         </TabPanel>
       </TabContext>
-    </div>
+    </Container>
   );
 };
 

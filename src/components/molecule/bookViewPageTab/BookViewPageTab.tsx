@@ -23,7 +23,7 @@ export default function BookViewPageTab(props:BookViewPageProps) {
   const classes = BookViewPageTabsStyle();
   return (
     <ThemeProvider theme={blinkistTheme}>
-      <Box sx={{ width: "100%", typography: "body2" }} >
+      <Box sx={{typography: "body2",width:{md:"600px"} }} >
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <TabList onChange={handleChange} aria-label="lab API tabs example" className={classes.style} variant="fullWidth">

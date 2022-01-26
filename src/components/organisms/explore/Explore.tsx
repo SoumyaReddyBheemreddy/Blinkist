@@ -89,8 +89,7 @@ export default function Explore() {
         }}
         className={classes.menu}
         // BackdropProps={{
-        //   invisible: false,
-        //   style:{position: "absolute"}
+        //   invisible: false
         // }}
         
       >

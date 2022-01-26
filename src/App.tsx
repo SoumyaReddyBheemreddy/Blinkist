@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import MyLibrary from './components/organisms/MyLibrary/MyLibrary';
-import Template from './components/page/MyLibraryPage';
+
+import MyLibraryPage from './components/page/MyLibraryPage';
 import { BrowserRouter,Routes, Route } from "react-router-dom";
-import BookView from './components/organisms/bookView/BookView';
+import BookViewPage from "./components/page/BookViewPage";
 function App() {
   return (
     // <div className="App">
@@ -36,10 +36,11 @@ function App() {
     // <Footer />
     <BrowserRouter>
     <Routes>
-    <Route path="/book" element={<BookView />}></Route>
+    <Route path="/book" element={<BookViewPage />}></Route>
+    <Route path="/" element={ <MyLibraryPage />}></Route>
     </Routes>
     
-     <Template><MyLibrary /></Template></BrowserRouter>
+    </BrowserRouter>
    
   );
 }

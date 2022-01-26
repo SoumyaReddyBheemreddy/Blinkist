@@ -43,7 +43,7 @@ export default function Header() {
             </IconButton>
             <Explore />
             <Link
-              href="#"
+              href="/"
               sx={{ ml: 4, alignSelf: "center" }}
               underline="hover"
               color=" #042330"

@@ -8,7 +8,8 @@
       "readingTime": "13 minute read",
       "userCount": "20k reads",
       "progress": 55,
-      "role": "currently reading"
+      "role": "currently reading",
+      "category":"featured audio blinks"
     },
     {
         "id": 2,
@@ -18,7 +19,8 @@
         "readingTime": "13-minute read",
         "userCount": "19k reads",
         "progress": 100,
-        "role": "finished"
+        "role": "explore",
+        "category":"trending blinks"
       },
       {
         "id": 3,
@@ -28,7 +30,8 @@
         "readingTime": "15-minute read",
         "userCount": "25k reads",
         "progress": 25,
-        "role": "currently reading"
+        "role": "explore",
+        "category":"trending blinks"
       },
       {
         "id": 4,
@@ -38,7 +41,8 @@
         "readingTime": "13-minute read",
         "userCount": "1.9k reads",
         "progress": 45,
-        "role": "currently reading"
+        "role": "currently reading",
+        "category":"featured audio blinks"
       },
       {
         "id": 5,
@@ -48,7 +52,8 @@
         "readingTime": "12-minute read",
         "userCount": "16k reads",
         "progress": 25,
-        "role": "currently reading"
+        "role": "currently reading",
+        "category":"trending blinks"
       },
       {
         "id": 6,
@@ -58,7 +63,8 @@
         "readingTime": "13-minute read",
         "userCount": "2.5k reads",
         "progress": 25,
-        "role": "currently reading"
+        "role": "explore",
+        "category":"trending blinks"
       },
       {
         "id": 7,
@@ -68,7 +74,8 @@
         "readingTime": "13-minute read",
         "userCount": "71k reads",
         "progress": 70,
-        "role": "currently reading"
+        "role": "currently reading",
+        "category":"trending blinks"
       },
       {
         "id": 8,
@@ -78,7 +85,8 @@
         "readingTime": "13-minute read",
         "userCount": "42k reads",
         "progress": 66,
-        "role": "currently reading"
+        "role": "currently reading",
+        "category":"just added"
       },
       {
         "id": 9,
@@ -88,7 +96,8 @@
         "readingTime": "13-minute read",
         "userCount": "1.9k reads",
         "progress": 30,
-        "role": "currently reading"
+        "role": "currently reading",
+        "category":"just added"
       },
       {
         "id": 10,
@@ -98,17 +107,19 @@
         "readingTime": "12-minute read",
         "userCount": "1.9k reads",
         "progress": 35,
-        "role": "currently reading"
+        "role": "currently reading",
+        "category":"just added"
       },
       {
         "id": 11,
         "title": "Being Boss",
-        "author": "James Moore",
+        "author": "Kathleen Shannon and Emily",
         "image": "/assets/cover_image/10.png",
         "readingTime": "12-minute read",
         "userCount": "1.9k reads",
-        "progress": 35,
-        "role": "finished"
+        "progress": 100,
+        "role": "finished",
+        "category":"trending blinks"
       }              
   ]
 }

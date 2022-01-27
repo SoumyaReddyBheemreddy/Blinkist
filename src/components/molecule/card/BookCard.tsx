@@ -38,9 +38,9 @@ export default function BookCard(props: MediaCardProps) {
           />
           <CardContent>
             <Typography
-              sx={{ paddingTop: "7px", fontSize: "18px" }}
+              sx={{ paddingTop: "7px" }}
               gutterBottom
-              variant="subtitle1"
+              variant="subtitle2"
               component="div"
             >
               {props.title}
@@ -72,7 +72,7 @@ export default function BookCard(props: MediaCardProps) {
             )}
             {props.role === "finished" && (
               <Link
-                sx={{ color: "#0365F2" }}
+                sx={{ color: "#0365F2",paddingBottom:"12px" }}
                 className={classes.link}
                 underline="hover"
               >
@@ -83,15 +83,14 @@ export default function BookCard(props: MediaCardProps) {
         </CardActionArea>
 
         {props.role !== "explore" && (
-          <CardActions>
+          <CardActions >
             <LinearProgress variant="determinate" value={props.progress} />
           </CardActions>
         )}
         {props.role === "explore" && (
-          <CardActions>
+          <CardActions >
               <CustomButton variant="text" />
-          </CardActions>
-            
+          </CardActions>   
           
         )}
       </Card>

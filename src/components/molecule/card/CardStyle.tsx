@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 export const cardStyle = makeStyles((theme) => {
   return {
     bookcard: {
-      height: "486px",
+      height: "476px",
       width: "284px",
       position: "relative",
       /* White */

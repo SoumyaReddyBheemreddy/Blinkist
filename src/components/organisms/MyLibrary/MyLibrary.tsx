@@ -18,6 +18,7 @@ interface Book {
   userCount: string;
   progress?: number;
   role: string;
+  category:string;
 }
 const MyLibrary = () => {
   const useStyles = makeStyles({
@@ -61,6 +62,7 @@ const MyLibrary = () => {
             progress={book.progress}
             onClick={() => {
               navigate("/book?id="+book.id);
+              window.scrollTo(0,0);
             }}
           />
         </Grid>

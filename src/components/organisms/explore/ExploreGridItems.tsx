@@ -46,7 +46,7 @@ export default function ExploreGridItems() {
     <Grid container sx={{ flexWrap: { md: "nowrap", xs: "wrap" } }}>
       <Grid item container direction="column">
         <Grid item>
-          <Link className={classes.button} underline="none">
+          <Link href="/enterpreneurship" className={classes.button} underline="none">
             <AiOutlineRocket
               style={{
                 paddingRight: "12px",

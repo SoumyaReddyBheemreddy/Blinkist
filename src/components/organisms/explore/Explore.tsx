@@ -88,9 +88,9 @@ export default function Explore() {
           },
         }}
         className={classes.menu}
-        // BackdropProps={{
-        //   invisible: false
-        // }}
+        BackdropProps={{
+          invisible: false
+        }}
         elevation={0}
         
       >

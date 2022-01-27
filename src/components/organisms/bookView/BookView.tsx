@@ -9,15 +9,12 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import BookViewPageTab from "../../molecule/bookViewPageTab/BookViewPageTab";
 import { makeStyles } from "@mui/styles";
 const useStyle = makeStyles({
-  subtitle:{
-    marginTop: "60px"
+  subtitle: {
+    marginTop: "60px",
   },
-  container:{
-    marginTop: "40px"
+  container: {
+    marginTop: "40px",
   },
-  icon:{
-    
-  }
 });
 interface Book {
   id: number;
@@ -28,7 +25,9 @@ interface Book {
   userCount: string;
   progress?: number;
   role: string;
+  category:string;
 }
+
 export default function BookView(props: any) {
   const query = new URLSearchParams(useLocation().search);
   const id = query.get("id");
@@ -49,7 +48,7 @@ export default function BookView(props: any) {
       <Box className={classes.subtitle}>
         <TypographyTag variant="body2" children="Get the key ideas from" />
       </Box>
-      <Box sx={{ display: { md: "flex" }}} className={classes.container}>
+      <Box sx={{ display: { md: "flex" } }} className={classes.container}>
         <Box>
           <TypographyTag variant="h1" children={book.title} />
           <TypographyTag
@@ -83,7 +82,15 @@ export default function BookView(props: any) {
 
             <Button
               variant="contained"
-              sx={{ marginTop: { xs: "10px", sm: "0px" }, backgroundColor: "#2CE080",color:"#03314B","&.MuiButton-root:hover":{backgroundColor:"#2CE080",color:"white"} }}
+              sx={{
+                marginTop: { xs: "10px", sm: "0px" },
+                backgroundColor: "#2CE080",
+                color: "#03314B",
+                "&.MuiButton-root:hover": {
+                  backgroundColor: "#2CE080",
+                  color: "white",
+                },
+              }}
             >
               Finished Reading
             </Button>

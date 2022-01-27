@@ -34,9 +34,9 @@ export const blinkistTheme = createTheme({
     subtitle2: {
       fontFamily: "Cera Pro",
       fontStyle: "normal",
-      fontWeight: "500",
-      fontSize: "24px",
-      lineHeight: "32px",
+      fontWeight: "bold",
+      fontSize: "18px",
+      lineHeight: "24px",
     },
     body1: {
       fontFamily: "Cera Pro",

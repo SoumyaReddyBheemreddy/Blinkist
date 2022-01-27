@@ -16,7 +16,7 @@ interface Book {
   role: string;
   category: string;
 }
-export default function EnterpreneurshipCards() {
+export default function ExploreBooks() {
   const [treadingBooks, setTreadingBooks] = useState<Book[]>([]);
   const [justAddedBooks, setJustAddedBooks] = useState<Book[]>([]);
   const [audioBooks, setAudioBooks] = useState<Book[]>([]);

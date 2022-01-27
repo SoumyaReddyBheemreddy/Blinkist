@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 export const cardStyle = makeStyles((theme) => {
   return {
     bookcard: {
-      height: "476px",
+      height: "475px",
       width: "284px",
       position: "relative",
       /* White */
@@ -21,7 +21,8 @@ export const cardStyle = makeStyles((theme) => {
       
     },
     statusView:{
-        display:"flex"
+        display:"flex",
+        paddingBottom:"14px" 
     },
     timeStatus: {
       display: "flex",
@@ -59,7 +60,7 @@ export const cardStyle = makeStyles((theme) => {
         
     },
     moreicon: {
-        paddingTop:"15px",
+       
         marginLeft: "87%",
       
     },

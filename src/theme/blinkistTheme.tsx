@@ -102,7 +102,7 @@ export const blinkistTheme = createTheme({
           width: "100%",
           fontSize: "16px",
           boxSizing: "border-box",
-          padding: "10px 24px",
+          padding: "8px 24px",
           borderRadius: "0px 0px 8px 8px",
           borderTop: "2px solid #E1ECFC",
         },

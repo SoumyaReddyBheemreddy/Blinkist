@@ -72,7 +72,7 @@ export default function BookCard(props: MediaCardProps) {
             )}
             {props.role === "finished" && (
               <Link
-                sx={{ color: "#0365F2",paddingBottom:"12px" }}
+                sx={{ color: "#0365F2"}}
                 className={classes.link}
                 underline="hover"
               >

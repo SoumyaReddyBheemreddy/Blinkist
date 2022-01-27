@@ -8,6 +8,7 @@ import { Link } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import ExploreGridItems from "./ExploreGridItems";
 import { Container, Box } from "@mui/material";
+import Backdrop from "@mui/material/Backdrop";
 const useStyle = makeStyles({
   button: {
     display: "flex",
@@ -32,6 +33,7 @@ const useStyle = makeStyles({
 });
 
 export default function Explore() {
+  const[open,setOpen] = useState(false);
   const [isDown, setIsDown] = useState(true);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const handleIcon = () => {
@@ -45,9 +47,12 @@ export default function Explore() {
       setAnchorEl(event.currentTarget);
       
     }
+    setOpen(!open);
     handleIcon();
   };
-
+  const handleClose = () => {
+    setOpen(false);
+  };
   const classes = useStyle();
   return (
     <>
@@ -77,27 +82,44 @@ export default function Explore() {
           />
         )}
       </Box>
+    
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
         open={Boolean(!isDown)}
         onClose={handleClick}
+        marginThreshold={0}
         PaperProps={{
           style: {
             width: "100%",
+            maxWidth: "100%",
+            left: 0,
+            right: 0,
+            borderRadius:"0px"
           },
         }}
+        
         className={classes.menu}
-        BackdropProps={{
-          invisible: false
-        }}
+      
         elevation={0}
         
       >
+        
         <Container fixed className={classes.navItems}>
           <ExploreGridItems />
         </Container>
       </Menu>
+      <Backdrop
+          sx={{
+            marginTop: "52px",
+            color: "#fff",
+            zIndex: (theme) => theme.zIndex.drawer + 1,
+          }}
+          open={open}
+          onClick={handleClose}
+        >
+        </Backdrop>
+      
     </>
   );
 }

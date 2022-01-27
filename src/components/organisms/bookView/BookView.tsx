@@ -8,6 +8,7 @@ import Button from "@mui/material/Button";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import BookViewPageTab from "../../molecule/bookViewPageTab/BookViewPageTab";
 import { makeStyles } from "@mui/styles";
+import { useNavigate } from "react-router-dom";
 const useStyle = makeStyles({
   subtitle: {
     marginTop: "60px",
@@ -29,6 +30,7 @@ interface Book {
 }
 
 export default function BookView(props: any) {
+  const navigate = useNavigate();
   const query = new URLSearchParams(useLocation().search);
   const id = query.get("id");
   //const id = 1;
@@ -36,13 +38,31 @@ export default function BookView(props: any) {
   useEffect(() => {
     async function bookData() {
       await axios.get("http://localhost:8086/books/" + id).then((res) => {
-        console.log(res.data);
         setBook(res.data);
       });
     }
     bookData();
   }, [id]);
   const classes = useStyle();
+  const handleClick = async ()=>{
+    
+    console.log(book);
+    await axios.put("http://localhost:8086/books/"+id,{
+      title: book.title,
+      author: book.author,
+      image: book.image,
+      readingTime: book.readingTime,
+      userCount: book.userCount,
+      progress: 100,
+      role: "finished",
+      category: book.category
+  }).then((res)=>{
+      console.log(res.data);
+      
+    })
+    navigate("/");
+
+  }
   return (
     <Container fixed>
       <Box className={classes.subtitle}>
@@ -91,6 +111,7 @@ export default function BookView(props: any) {
                   color: "white",
                 },
               }}
+              onClick={handleClick}
             >
               Finished Reading
             </Button>

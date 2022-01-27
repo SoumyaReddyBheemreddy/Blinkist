@@ -15,7 +15,7 @@
         "title": "Beyond Entreprenurship",
         "author": "Jim Collins & Bill Lazier",
         "image": "/assets/cover_image/2.png",
-        "readingTime": "13 minute read",
+        "readingTime": "13-minute read",
         "userCount": "19k reads",
         "progress": 100,
         "role": "finished"
@@ -25,30 +25,90 @@
         "title": "Employee to Entrepreneur",
         "author": "Steve Glaveski",
         "image": "/assets/cover_image/11.png",
-        "readingTime": "15 minute read",
+        "readingTime": "15-minute read",
         "userCount": "25k reads",
         "progress": 25,
         "role": "currently reading"
       },
       {
         "id": 4,
-        "title": "Employee to Entrepreneur",
-        "author": "Steve Glaveski",
-        "image": "/assets/cover_image/11.png",
-        "readingTime": "15 minute read",
-        "userCount": "10k reads",
-        "progress": 25,
+        "title": "Doesn’t Hurt to Ask",
+        "author": "Trey Gowdy",
+        "image": "/assets/cover_image/3.png",
+        "readingTime": "13-minute read",
+        "userCount": "1.9k reads",
+        "progress": 45,
         "role": "currently reading"
       },
       {
         "id": 5,
-        "title": "Employee to Entrepreneur",
-        "author": "Steve Glaveski",
-        "image": "/assets/cover_image/11.png",
-        "readingTime": "15 minute read",
-        "userCount": "25k reads",
+        "title": "The Fate of Food",
+        "author": "Amanda Little",
+        "image": "/assets/cover_image/4.png",
+        "readingTime": "12-minute read",
+        "userCount": "16k reads",
         "progress": 25,
         "role": "currently reading"
-      }    
+      },
+      {
+        "id": 6,
+        "title": "Lives of the Stoics",
+        "author": "Ryan Holiday, Stephen Hansel",
+        "image": "/assets/cover_image/5.png",
+        "readingTime": "13-minute read",
+        "userCount": "2.5k reads",
+        "progress": 25,
+        "role": "currently reading"
+      },
+      {
+        "id": 7,
+        "title": "Loving Your Business",
+        "author": "Debbie King",
+        "image": "/assets/cover_image/6.png",
+        "readingTime": "13-minute read",
+        "userCount": "71k reads",
+        "progress": 70,
+        "role": "currently reading"
+      },
+      {
+        "id": 8,
+        "title": "The Lonely Century",
+        "author": "Noreena Hertz",
+        "image": "/assets/cover_image/7.png",
+        "readingTime": "13-minute read",
+        "userCount": "42k reads",
+        "progress": 66,
+        "role": "currently reading"
+      },
+      {
+        "id": 9,
+        "title": "Eat Better, Feel Better",
+        "author": "Giada De Laurentiis",
+        "image": "/assets/cover_image/8.png",
+        "readingTime": "13-minute read",
+        "userCount": "1.9k reads",
+        "progress": 30,
+        "role": "currently reading"
+      },
+      {
+        "id": 10,
+        "title": "Dropshipping",
+        "author": "James Moore",
+        "image": "/assets/cover_image/9.png",
+        "readingTime": "12-minute read",
+        "userCount": "1.9k reads",
+        "progress": 35,
+        "role": "currently reading"
+      },
+      {
+        "id": 11,
+        "title": "Being Boss",
+        "author": "James Moore",
+        "image": "/assets/cover_image/10.png",
+        "readingTime": "12-minute read",
+        "userCount": "1.9k reads",
+        "progress": 35,
+        "role": "finished"
+      }              
   ]
 }

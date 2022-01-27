@@ -91,6 +91,7 @@ export default function Explore() {
         // BackdropProps={{
         //   invisible: false
         // }}
+        elevation={0}
         
       >
         <Container fixed className={classes.navItems}>

@@ -7,6 +7,18 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import Button from "@mui/material/Button";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import BookViewPageTab from "../../molecule/bookViewPageTab/BookViewPageTab";
+import { makeStyles } from "@mui/styles";
+const useStyle = makeStyles({
+  subtitle:{
+    marginTop: "60px"
+  },
+  container:{
+    marginTop: "40px"
+  },
+  icon:{
+    
+  }
+});
 interface Book {
   id: number;
   title: string;
@@ -31,12 +43,13 @@ export default function BookView(props: any) {
     }
     bookData();
   }, [id]);
+  const classes = useStyle();
   return (
     <Container fixed>
-      <Box sx={{ marginTop: "60px" }}>
+      <Box className={classes.subtitle}>
         <TypographyTag variant="body2" children="Get the key ideas from" />
       </Box>
-      <Box sx={{ display: { sm: "block", md: "flex" }, marginTop: "40px" }}>
+      <Box sx={{ display: { md: "flex" }}} className={classes.container}>
         <Box>
           <TypographyTag variant="h1" children={book.title} />
           <TypographyTag
@@ -61,13 +74,16 @@ export default function BookView(props: any) {
             <TypographyTag variant="caption" children={book.readingTime} />
           </Box>
           <Box sx={{ display: { md: "flex" }, marginTop: "83px" }}>
-            <Button variant="outlined" sx={{ marginRight: "31.5px" }}>
+            <Button
+              variant="outlined"
+              sx={{ marginRight: "31.5px", color: "#22C870" }}
+            >
               Read now
             </Button>
 
             <Button
               variant="contained"
-              sx={{ marginTop: { xs: "10px", sm: "0px" } }}
+              sx={{ marginTop: { xs: "10px", sm: "0px" }, backgroundColor: "#2CE080",color:"#03314B","&.MuiButton-root:hover":{backgroundColor:"#2CE080",color:"white"} }}
             >
               Finished Reading
             </Button>
@@ -78,12 +94,13 @@ export default function BookView(props: any) {
               sx={{
                 marginLeft: { sm: "31.5px" },
                 marginTop: { xs: "10px", sm: "0px" },
+                color: "#6D787E",
               }}
             >
               Send to Kindle
             </Button>
           </Box>
-          <Box sx={{marginTop:"60px" }}>
+          <Box sx={{ marginTop: "60px" }}>
             <BookViewPageTab
               synopsis="Beyond Entrepreneurship 2.0 (2020) updates Jim Collins and Bill Lazier’s essential 1992 business handbook, Beyond Entrepreneurship for the entrepreneurs, visionaries, and innovators of today. This new edition combines the timeless business advice and strategy of the original text, supplemented with cutting-edge insights and case studies pertinent to today’s business world."
               whoIsitFor="Turning Your Business into an Enduring Great Company"
@@ -91,11 +108,17 @@ export default function BookView(props: any) {
             />
           </Box>
         </Box>
-        <Box sx={{ alignItems: "center", marginLeft: { md: "125px" }}}>
+        <Box sx={{ alignItems: "center", marginLeft: { md: "125px" } }}>
           <img src={process.env.PUBLIC_URL + book.image} alt={book.title} />
         </Box>
       </Box>
-      <hr style={{borderTop:"1px solid #E1ECFC",marginTop:"80px",marginBottom:"177px"}} />
+      <hr
+        style={{
+          borderTop: "1px solid #E1ECFC",
+          marginTop: "80px",
+          marginBottom: "177px",
+        }}
+      />
     </Container>
   );
 }

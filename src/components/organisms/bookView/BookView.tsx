@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate  } from "react-router-dom";
 import axios from "axios";
 import { Box, Container } from "@mui/material";
 import TypographyTag from "../../atoms/typography/TypographyTag";
@@ -8,7 +8,6 @@ import Button from "@mui/material/Button";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import BookViewPageTab from "../../molecule/bookViewPageTab/BookViewPageTab";
 import { makeStyles } from "@mui/styles";
-import { useNavigate } from "react-router-dom";
 const useStyle = makeStyles({
   subtitle: {
     marginTop: "60px",
@@ -33,7 +32,6 @@ export default function BookView(props: any) {
   const navigate = useNavigate();
   const query = new URLSearchParams(useLocation().search);
   const id = query.get("id");
-  //const id = 1;
   const [book, setBook] = useState<Book>(Object);
   useEffect(() => {
     async function bookData() {

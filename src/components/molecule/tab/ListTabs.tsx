@@ -24,7 +24,6 @@ export default function ListTabs(props: ListTabsProps) {
           onChange={handleChange}
           textColor="primary"
           indicatorColor="primary"
-          variant="fullWidth"
           className={classes.style}
         >
           <Tab value="currently reading" label="Currently reading" />

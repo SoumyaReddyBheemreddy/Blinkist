@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 
-import MyLibraryPage from "./components/page/MyLibraryPage";
+import MyLibraryPage from "./page/MyLibraryPage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import BookViewPage from "./components/page/BookViewPage";
-import EnterprenurshipPage from "./components/page/EnterpreneurshipPage";
+import BookViewPage from "./page/BookViewPage";
+import EnterprenurshipPage from "./page/EnterpreneurshipPage";
 function App() {
   return (
     <BrowserRouter>

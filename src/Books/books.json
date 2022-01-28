@@ -56,26 +56,26 @@
       "category": "trending blinks"
     },
     {
-      "id": 6,
       "title": "Lives of the Stoics",
       "author": "Ryan Holiday, Stephen Hansel",
       "image": "/assets/cover_image/5.png",
       "readingTime": "13-minute read",
       "userCount": "2.5k reads",
-      "progress": 25,
+      "progress": 100,
       "role": "explore",
-      "category": "trending blinks"
+      "category": "trending blinks",
+      "id": 6
     },
     {
-      "id": 7,
       "title": "Loving Your Business",
       "author": "Debbie King",
       "image": "/assets/cover_image/6.png",
       "readingTime": "13-minute read",
       "userCount": "71k reads",
-      "progress": 70,
-      "role": "currently reading",
-      "category": "trending blinks"
+      "progress": 100,
+      "role": "explore",
+      "category": "trending blinks",
+      "id": 7
     },
     {
       "id": 8,

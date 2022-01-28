@@ -8,7 +8,8 @@ export const ListTabsStyle = makeStyles({
       fontWeight: "700",
       fontSize: "18px",
       padding: "16px",
-      alignItems:"flex-start;"
+      alignItems:"flex-start",
+      width:"304px"
     }, 
     
   },

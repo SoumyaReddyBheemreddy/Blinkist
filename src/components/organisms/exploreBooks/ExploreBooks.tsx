@@ -63,7 +63,7 @@ export default function ExploreBooks() {
   return (
     <Container fixed>
       <TypographyTag
-        sx={{ marginTop: "80px", marginBottom: "25px" }}
+        sx={{ marginTop: "80px", marginBottom: "25px",fontSize:"24px" }}
         variant="h1"
         children="Trending blinks"
       />
@@ -71,7 +71,7 @@ export default function ExploreBooks() {
         {cards(treadingBooks)}
       </Grid>
       <TypographyTag
-        sx={{ marginTop: "80px", marginBottom: "25px" }}
+        sx={{ marginTop: "80px", marginBottom: "25px",fontSize:"24px" }}
         variant="h1"
         children="Just Added"
       />
@@ -79,7 +79,7 @@ export default function ExploreBooks() {
         {cards(justAddedBooks)}
       </Grid>
       <TypographyTag
-        sx={{ marginTop: "80px", marginBottom: "25px" }}
+        sx={{ marginTop: "80px", marginBottom: "25px",fontSize:"24px" }}
         variant="h1"
         children="Featured audio blinks"
       />

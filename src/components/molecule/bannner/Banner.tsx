@@ -5,7 +5,7 @@ import TypographyTag from "../../atoms/typography/TypographyTag";
 export default function Banner() {
   return (
     <Container fixed>
-      <Container fixed sx={{ backgroundColor: "#F1F6F4",marginTop:"32px" }}>
+      <Container fixed sx={{ backgroundColor: "#F1F6F4",marginTop:"32px"}}>
         <Box
           sx={{ display: { sm: "block", md: "flex" }, alignItems: "center" }}
         >
@@ -26,13 +26,13 @@ export default function Banner() {
               }}
             >
               <TypographyTag
-              sx={{fontWeight:"400"}}
+              sx={{fontWeight:"400",color:"#6D787E"}}
                 variant="subtitle2"
                 children="Everything you need to know about thriving on a shoestring budget, making your first million, and hiring right from the start."
               />
             </Box>
           </Box>
-          <Box>
+          <Box >
             <img src={banner} alt="banner" />
           </Box>
         </Box>

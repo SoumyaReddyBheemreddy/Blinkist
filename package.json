@@ -9,7 +9,6 @@
     "@mui/lab": "^5.0.0-alpha.65",
     "@mui/material": "^5.3.0",
     "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.4.0",
     "@types/node": "^16.11.21",
@@ -26,7 +25,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build-static-webapp":"expo build:web",
+    "build-static-webapp": "expo build:web",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -73,6 +72,7 @@
     "@storybook/node-logger": "^6.4.13",
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.13",
+    "@testing-library/react": "^12.1.2",
     "babel-loader": "^8.2.3",
     "webpack": "^5.66.0"
   }

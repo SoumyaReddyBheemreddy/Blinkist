@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import MyLibraryPage from './MyLibraryPage';
 import {BrowserRouter} from 'react-router-dom'
-import MyLibrary from "../organisms/MyLibrary/MyLibrary";
+import MyLibrary from "../components/organisms/MyLibrary/MyLibrary";
 export default{
     title:"Pages/MyLibraryPage",
     compontent:MyLibraryPage

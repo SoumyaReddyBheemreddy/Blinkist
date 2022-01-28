@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import AvatarIcon from "./AvatarIcon";
+import AvatarIcon from "../AvatarIcon";
 
 test('renders a avatarw', () => {
   render(<AvatarIcon children='A'/>);

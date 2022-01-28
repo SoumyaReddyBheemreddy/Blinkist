@@ -12,10 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-           args: >
-            -Dsonar.organization=myOrg
-            -Dsonar.projectKey=myProjectKey
+          args: >
+            -Dsonar.organization=soumyareddybheemreddy
+            -Dsonar.projectKey=SoumyaReddyBheemreddy_Blinkist
             -Dsonar.sources=src
             -Dsonar.tests=src
             -Dsonar.test.inclusions=src/**/__tests__/**
@@ -25,5 +24,5 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

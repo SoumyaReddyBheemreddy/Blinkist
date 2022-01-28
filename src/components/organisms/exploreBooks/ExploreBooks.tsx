@@ -44,13 +44,13 @@ export default function ExploreBooks() {
         <Grid key={index} item xs={12} sm={12} md={6} lg={4}>
           <Card
             key={book.id}
-            title={book.title}
-            author={book.author}
-            image={book.image}
             readingTime={book.readingTime}
             userCount={book.userCount}
             role={book.role}
             progress={book.progress}
+            title={book.title}
+            author={book.author}
+            image={book.image}
             onClick={() => {
               navigate("/book?id=" + book.id);
               window.scrollTo(0, 0);
@@ -62,16 +62,28 @@ export default function ExploreBooks() {
   };
   return (
     <Container fixed>
-      <TypographyTag sx={{marginTop:"80px",marginBottom:"25px"}} variant="h1" children="Trending blinks" />
+      <TypographyTag
+        sx={{ marginTop: "80px", marginBottom: "25px" }}
+        variant="h1"
+        children="Trending blinks"
+      />
       <Grid container rowSpacing={3}>
         {cards(treadingBooks)}
       </Grid>
-      <TypographyTag sx={{marginTop:"80px",marginBottom:"25px"}} variant="h1" children="Just Added" />
+      <TypographyTag
+        sx={{ marginTop: "80px", marginBottom: "25px" }}
+        variant="h1"
+        children="Just Added"
+      />
       <Grid container rowSpacing={3}>
         {cards(justAddedBooks)}
       </Grid>
-      <TypographyTag sx={{marginTop:"80px",marginBottom:"25px"}} variant="h1" children="Featured audio blinks" />
-      <Grid container rowSpacing={3} sx={{marginBottom:"76px"}}>
+      <TypographyTag
+        sx={{ marginTop: "80px", marginBottom: "25px" }}
+        variant="h1"
+        children="Featured audio blinks"
+      />
+      <Grid container rowSpacing={3} sx={{ marginBottom: "76px" }}>
         {cards(audioBooks)}
       </Grid>
     </Container>

@@ -5,6 +5,6 @@ interface LogoProps{
 }
 export default function Logo(props:LogoProps){
     return(
-        <img src={logo} alt = "Logo" /> 
+        <img src={logo} alt = "Logo" title="Logo" /> 
     );
 }

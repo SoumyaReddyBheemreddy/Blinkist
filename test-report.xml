@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/logo/__test__/Logo.test.tsx">
-    <testCase name="renders a logo" duration="35"/>
+  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/AvatarIcon.test.tsx">
   </file>
-  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/__test__/AvatarIcon.test.tsx">
-    <testCase name="renders a avatarw" duration="37"/>
+  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/logo/Logo.test.tsx">
   </file>
 </testExecutions>

@@ -28,7 +28,7 @@ export default function BookCard(props: MediaCardProps) {
   const classes = cardStyle();
   return (
     <ThemeProvider theme={blinkistTheme}>
-      <Card className={classes.bookcard} onClick={props.onClick}>
+      <Card className={classes.bookcard} onClick={props.onClick} data-testid="cardButton">
         <CardActionArea disableRipple= {true} sx={{padding:"0px"}}>
           <CardMedia
             className={classes.cardmedia}
@@ -68,13 +68,14 @@ export default function BookCard(props: MediaCardProps) {
             </div>
 
             {props.role === "currently reading" && (
-              <MoreHorizIcon className={classes.moreicon} />
+              <MoreHorizIcon data-testid="current" className={classes.moreicon} />
             )}
             {props.role === "finished" && (
-              <Link
+              <Link data-testid="finished"
                 sx={{ color: "#0365F2"}}
                 className={classes.link}
                 underline="hover"
+                
               >
                 Read Again
               </Link>
@@ -83,12 +84,12 @@ export default function BookCard(props: MediaCardProps) {
         </CardActionArea>
 
         {props.role !== "explore" && (
-          <CardActions >
+          <CardActions  >
             <LinearProgress variant="determinate" value={props.progress} />
           </CardActions>
         )}
         {props.role === "explore" && (
-          <CardActions >
+          <CardActions data-testid="explore" >
               <CustomButton variant="text" />
           </CardActions>   
           

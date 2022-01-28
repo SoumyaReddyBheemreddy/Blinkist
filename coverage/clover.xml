@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1643378203738" clover="3.2.0">
-  <project timestamp="1643378203739" name="All files">
-    <metrics statements="181" coveredstatements="4" conditionals="20" coveredconditionals="0" methods="74" coveredmethods="3" elements="275" coveredelements="7" complexity="0" loc="181" ncloc="181" packages="21" files="48" classes="48"/>
+<coverage generated="1643382323010" clover="3.2.0">
+  <project timestamp="1643382323011" name="All files">
+    <metrics statements="175" coveredstatements="10" conditionals="20" coveredconditionals="8" methods="72" coveredmethods="7" elements="267" coveredelements="25" complexity="0" loc="175" ncloc="175" packages="20" files="45" classes="45"/>
     <package name="src">
       <metrics statements="11" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="3" coveredmethods="0"/>
       <file name="App.tsx" path="/home/soumbr/Documents/blinkist/src/App.tsx">
@@ -54,19 +54,19 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="TypographyTag.tsx" path="/home/soumbr/Documents/blinkist/src/components/atoms/typography/TypographyTag.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
       </file>
     </package>
     <package name="src.components.molecule.bannner">
-      <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
       <file name="Banner.stories.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/bannner/Banner.stories.tsx">
         <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
       </file>
       <file name="Banner.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/bannner/Banner.tsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="6" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.components.molecule.bookViewPageTab">
@@ -91,11 +91,11 @@
       </file>
     </package>
     <package name="src.components.molecule.card">
-      <metrics statements="12" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <metrics statements="12" coveredstatements="4" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="2"/>
       <file name="BookCard.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/card/BookCard.tsx">
-        <metrics statements="2" coveredstatements="0" conditionals="8" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="8" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
       </file>
       <file name="Card.stories.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/card/Card.stories.tsx">
         <metrics statements="8" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
@@ -109,34 +109,16 @@
         <line num="32" count="0" type="stmt"/>
       </file>
       <file name="CardStyle.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/card/CardStyle.tsx">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
       </file>
     </package>
     <package name="src.components.molecule.customButton">
-      <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="CustomButton.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/customButton/CustomButton.tsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.components.molecule.extendedNav">
-      <metrics statements="6" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="ExtendedNav.stories.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/extendedNav/ExtendedNav.stories.tsx">
-        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-      </file>
-      <file name="ExtendedNavLink.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/extendedNav/ExtendedNavLink.tsx">
-        <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-      </file>
-      <file name="ExtendedNavLinkStyle.tsx" path="/home/soumbr/Documents/blinkist/src/components/molecule/extendedNav/ExtendedNavLinkStyle.tsx">
-        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="0" type="stmt"/>
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.components.molecule.tab">
@@ -387,7 +369,7 @@
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="blinkistTheme.tsx" path="/home/soumbr/Documents/blinkist/src/theme/blinkistTheme.tsx">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="3" count="1" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
       </file>
     </package>
   </project>

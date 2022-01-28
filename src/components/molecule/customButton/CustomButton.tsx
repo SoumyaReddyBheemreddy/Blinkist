@@ -7,7 +7,7 @@ interface CustomButtonProps{
 }
 export default function CustomButton(props:CustomButtonProps){
     return (
-      <Button variant={props.variant} startIcon={<AddIcon />} fullWidth={true} sx={{color:"#0365F2"}}>
+      <Button variant={props.variant} startIcon={<AddIcon />} fullWidth={true} sx={{color:"#0365F2"}} role="button">
         <TypographyTag children='Add to library' variant='body1' />
       </Button>
     );

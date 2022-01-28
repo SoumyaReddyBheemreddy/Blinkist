@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/AvatarIcon.test.tsx">
-  </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/atoms/logo/Logo.test.tsx">
+    <testCase name="renders a logo" duration="63"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/AvatarIcon.test.tsx">
+    <testCase name="renders a avatarw" duration="78"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/typography/TypographyTag.test.tsx">
+    <testCase name="renders a typography tag" duration="70"/>
   </file>
 </testExecutions>

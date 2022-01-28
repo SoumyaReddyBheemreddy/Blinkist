@@ -32,7 +32,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "coverage": "CI=true npm test -- --coverage --testResultsProcessor=jest-sonar-reporter"
+    "coverage": "CI=true npm test -- --coverage --testResultsProcessor=jest-sonar-reporter",
+    "sonar-scanner": "node_modules/sonar-scanner/bin/sonar-scanner"
   },
   "eslintConfig": {
     "extends": [
@@ -75,7 +76,8 @@
     "@storybook/react": "^6.4.13",
     "@testing-library/react": "^12.1.2",
     "babel-loader": "^8.2.3",
-    "webpack": "^5.66.0",
-    "jest-sonar-reporter": "^2.0.0"
+    "jest-sonar-reporter": "^2.0.0",
+    "sonar-scanner": "^3.1.0",
+    "webpack": "^5.66.0"
   }
 }

@@ -6,7 +6,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { blinkistTheme } from "../../../theme/blinkistTheme";
 import { ListTabsStyle } from "./ListTabsStyle";
 interface ListTabsProps {
-  stateHandler : (arg:string)=>void
+  stateHandler? : (arg:string)=>void
 }
 export default function ListTabs(props: ListTabsProps) {
   const [value, setValue] = React.useState("currently reading");

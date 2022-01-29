@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/logo/Logo.test.tsx">
-    <testCase name="renders a logo" duration="89"/>
+  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/AvatarIcon.test.tsx">
+    <testCase name="renders a avatarw" duration="176"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/atoms/typography/TypographyTag.test.tsx">
-    <testCase name="renders a typography tag" duration="83"/>
-  </file>
-  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/AvatarIcon.test.tsx">
-    <testCase name="renders a avatarw" duration="96"/>
+    <testCase name="renders a typography tag" duration="130"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/customButton/CustomButton.test.tsx">
-    <testCase name="renders a avatarw" duration="213"/>
+    <testCase name="renders a avatarw" duration="436"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/molecule/tab/ListTabs.test.tsx">
+    <testCase name="render a tab" duration="812"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/logo/Logo.test.tsx">
+    <testCase name="renders a logo" duration="66"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/bannner/Banner.test.tsx">
-    <testCase name="Banner renders a banner title" duration="97"/>
-    <testCase name="Banner renders a banner sub text" duration="29"/>
-    <testCase name="Banner renders a banner image" duration="13"/>
+    <testCase name="Banner renders a banner title" duration="210"/>
+    <testCase name="Banner renders a banner sub text" duration="33"/>
+    <testCase name="Banner renders a banner image" duration="24"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/molecule/bookViewPageTab/BookViewPageTab.test.tsx">
+    <testCase name="render a tab" duration="783"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/card/BookCard.test.tsx">
-    <testCase name="Book Card render a currently reading book" duration="198"/>
-    <testCase name="Book Card render a finished reading book" duration="77"/>
-    <testCase name="Book Card render a explore book" duration="136"/>
+    <testCase name="Book Card render a currently reading book" duration="248"/>
+    <testCase name="Book Card render a finished reading book" duration="59"/>
+    <testCase name="Book Card render a explore book" duration="94"/>
   </file>
 </testExecutions>

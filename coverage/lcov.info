@@ -258,9 +258,9 @@ DA:19,2
 LF:6
 LH:6
 BRDA:16,0,0,1
-BRDA:16,0,1,0
+BRDA:16,0,1,1
 BRF:2
-BRH:1
+BRH:2
 end_of_record
 TN:
 SF:src/components/molecule/tab/ListTabsStyle.tsx

@@ -55,17 +55,18 @@ export default function Explore() {
   const classes = useStyle();
   return (
     <>
-      <Box sx={{ alignSelf: "center"}}>
+      <Box sx={{ alignSelf: "center"}} data-testid="explore">
         <Link
           className={classes.button}
           underline="none"
           onClick={handleClick}
           sx={{ padding: "0px" }}
+          data-testid="isDownButton"
         >
           <TypographyTag variant="body1" children="Explore" />
 
-          <IconButton>
-            {isDown ? <ExpandMoreIcon /> : <ExpandLessIcon />}
+          <IconButton >
+            {isDown ? <ExpandMoreIcon  /> : <ExpandLessIcon />}
           </IconButton>
         </Link>
         {!isDown && (
@@ -78,6 +79,7 @@ export default function Explore() {
               padding: "0px",
               width: "100%",
             }}
+            data-testid="isUp"
           />
         )}
       </Box>
@@ -101,7 +103,7 @@ export default function Explore() {
         className={classes.menu}
       
         elevation={0}
-        
+        data-testid="menu"
       >
         
         <Container fixed className={classes.navItems}>

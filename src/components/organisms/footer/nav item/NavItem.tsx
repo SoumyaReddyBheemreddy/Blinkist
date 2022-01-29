@@ -12,7 +12,7 @@ interface LinkProps {
 }
 function Item(props: LinkProps) {
   return (
-    <Link href="#" underline="hover" >
+    <Link href="#" underline="hover" data-testid="nav-item">
       <TypographyTag sx={{margin: "16px 0px"}} children={props.name} variant="body2" />
     </Link>
   );

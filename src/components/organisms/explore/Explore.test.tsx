@@ -20,5 +20,11 @@ describe("Explore",()=>{
         expect(expandLess).toBeInTheDocument();
         expect(hrElement).toBeInTheDocument();
     })
-   
+    test("render a backdrop onclick",()=>{
+        render(<Explore />);
+        const backdropElement = screen.getByTestId("backdrop");
+        fireEvent.click(backdropElement);
+        const explore = screen.getByTestId("explore");
+        expect(explore).toBeInTheDocument();
+    })
 })

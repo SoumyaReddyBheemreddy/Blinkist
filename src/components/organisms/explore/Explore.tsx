@@ -118,6 +118,7 @@ export default function Explore() {
           }}
           open={open}
           onClick={handleClose}
+          data-testid="backdrop"
         >
         </Backdrop>
       

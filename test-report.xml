@@ -1,44 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/customButton/CustomButton.test.tsx">
-    <testCase name="renders a avatarw" duration="353"/>
-  </file>
-  <file path="/home/soumbr/Documents/blinkist/src/components/molecule/tab/ListTabs.test.tsx">
-    <testCase name="render a tab" duration="781"/>
+    <testCase name="renders a avatarw" duration="526"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/bookViewPageTab/BookViewPageTab.test.tsx">
-    <testCase name="render a tab" duration="1147"/>
+    <testCase name="render a tab" duration="1395"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/molecule/tab/ListTabs.test.tsx">
+    <testCase name="render a tab" duration="1163"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/bannner/Banner.test.tsx">
-    <testCase name="Banner renders a banner title" duration="213"/>
-    <testCase name="Banner renders a banner sub text" duration="50"/>
-    <testCase name="Banner renders a banner image" duration="40"/>
-  </file>
-  <file path="/home/soumbr/Documents/blinkist/src/components/organisms/footer/nav item/NavItem.test.tsx">
-    <testCase name="render a nav items" duration="357"/>
-  </file>
-  <file path="/home/soumbr/Documents/blinkist/src/components/molecule/card/BookCard.test.tsx">
-    <testCase name="Book Card render a currently reading book" duration="437"/>
-    <testCase name="Book Card render a finished reading book" duration="91"/>
-    <testCase name="Book Card render a explore book" duration="200"/>
+    <testCase name="Banner renders a banner title" duration="234"/>
+    <testCase name="Banner renders a banner sub text" duration="79"/>
+    <testCase name="Banner renders a banner image" duration="28"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/organisms/footer/nav section/NavSection.test.tsx">
-    <testCase name="render a nav items" duration="368"/>
-  </file>
-  <file path="/home/soumbr/Documents/blinkist/src/components/organisms/footer/Footer.test.tsx">
-    <testCase name="render a nav items" duration="528"/>
+    <testCase name="render a nav items" duration="442"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/atoms/typography/TypographyTag.test.tsx">
-    <testCase name="renders a typography tag" duration="97"/>
+    <testCase name="renders a typography tag" duration="151"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/organisms/footer/Footer.test.tsx">
+    <testCase name="render a nav items" duration="559"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/organisms/footer/nav item/NavItem.test.tsx">
+    <testCase name="render a nav items" duration="276"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/molecule/card/BookCard.test.tsx">
+    <testCase name="Book Card render a currently reading book" duration="620"/>
+    <testCase name="Book Card render a finished reading book" duration="262"/>
+    <testCase name="Book Card render a explore book" duration="225"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/atoms/logo/Logo.test.tsx">
-    <testCase name="renders a logo" duration="53"/>
+    <testCase name="renders a logo" duration="46"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/AvatarIcon.test.tsx">
-    <testCase name="renders a avatarw" duration="63"/>
+    <testCase name="renders a avatarw" duration="68"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/organisms/explore/Explore.test.tsx">
-    <testCase name="Explore render a expand less" duration="173"/>
-    <testCase name="Explore render a expand more" duration="317"/>
+    <testCase name="Explore render a expand less" duration="210"/>
+    <testCase name="Explore render a expand more" duration="332"/>
+    <testCase name="Explore render a backdrop onclick" duration="30"/>
   </file>
 </testExecutions>

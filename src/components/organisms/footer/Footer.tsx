@@ -8,7 +8,7 @@ export default function Footer() {
   const classes = FooterStyle();
   return (
     <div className={classes.main}>
-      <Container >
+      <Container data-testid="footer">
         <Box  sx={{display:{sm:"block",md:"flex"},paddingTop:"32px"}}>
           <Box sx={{ margin: "16px 0px", width: "378px" }}>
             <Box>

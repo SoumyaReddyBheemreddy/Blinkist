@@ -19,10 +19,10 @@ function Item(props: LinkProps) {
 }
 export default function NavItem(props: NavItemProps) {
   return (
-    <Box>
+    <Box role="box">
       <TypographyTag sx={{margin: "16px 0px"}} children={props.title} variant="body1" />
       {props.items.map((item,index) => (
-        <Item name={item} key={index} />
+        <Item name={item} key={index}/>
       ))}
     </Box>
   );

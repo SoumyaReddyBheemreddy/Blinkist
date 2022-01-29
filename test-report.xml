@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/AvatarIcon.test.tsx">
-    <testCase name="renders a avatarw" duration="152"/>
-  </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/atoms/typography/TypographyTag.test.tsx">
-    <testCase name="renders a typography tag" duration="120"/>
+    <testCase name="renders a typography tag" duration="180"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/customButton/CustomButton.test.tsx">
-    <testCase name="renders a avatarw" duration="483"/>
+    <testCase name="renders a avatarw" duration="498"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/bookViewPageTab/BookViewPageTab.test.tsx">
-    <testCase name="render a tab" duration="1017"/>
-  </file>
-  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/logo/Logo.test.tsx">
-    <testCase name="renders a logo" duration="66"/>
+    <testCase name="render a tab" duration="1215"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/tab/ListTabs.test.tsx">
-    <testCase name="render a tab" duration="553"/>
+    <testCase name="render a tab" duration="932"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/organisms/footer/nav section/NavSection.test.tsx">
+    <testCase name="render a nav items" duration="394"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/avatar/AvatarIcon.test.tsx">
+    <testCase name="renders a avatarw" duration="121"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/atoms/logo/Logo.test.tsx">
+    <testCase name="renders a logo" duration="52"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/bannner/Banner.test.tsx">
-    <testCase name="Banner renders a banner title" duration="201"/>
-    <testCase name="Banner renders a banner sub text" duration="31"/>
-    <testCase name="Banner renders a banner image" duration="28"/>
+    <testCase name="Banner renders a banner title" duration="244"/>
+    <testCase name="Banner renders a banner sub text" duration="52"/>
+    <testCase name="Banner renders a banner image" duration="51"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/organisms/footer/nav item/NavItem.test.tsx">
+    <testCase name="render a nav items" duration="232"/>
   </file>
   <file path="/home/soumbr/Documents/blinkist/src/components/molecule/card/BookCard.test.tsx">
-    <testCase name="Book Card render a currently reading book" duration="189"/>
-    <testCase name="Book Card render a finished reading book" duration="62"/>
-    <testCase name="Book Card render a explore book" duration="107"/>
+    <testCase name="Book Card render a currently reading book" duration="286"/>
+    <testCase name="Book Card render a finished reading book" duration="97"/>
+    <testCase name="Book Card render a explore book" duration="149"/>
+  </file>
+  <file path="/home/soumbr/Documents/blinkist/src/components/organisms/footer/Footer.test.tsx">
+    <testCase name="render a nav items" duration="175"/>
   </file>
 </testExecutions>

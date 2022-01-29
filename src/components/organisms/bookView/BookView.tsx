@@ -43,8 +43,6 @@ export default function BookView(props: any) {
   }, [id]);
   const classes = useStyle();
   const handleClick = async ()=>{
-    
-    console.log(book);
     await axios.put("http://localhost:8086/books/"+id,{
       title: book.title,
       author: book.author,
@@ -54,10 +52,7 @@ export default function BookView(props: any) {
       progress: 100,
       role: "finished",
       category: book.category
-  }).then((res)=>{
-      console.log(res.data);
-      
-    })
+  })
     navigate("/");
 
   }

@@ -59,6 +59,7 @@ const MockMyLibrary = () => {
     </BrowserRouter>
   );
 };
+window.scrollTo = jest.fn();
 describe("My Library", () => {
   test("render currently reading tab", async () => {
     mockedAxios.get.mockResolvedValue(Promise.resolve(response));
@@ -94,8 +95,9 @@ describe("My Library", () => {
     render(<MockMyLibrary />);
     const bookCard = await screen.findByTestId(/card-1/i);
     fireEvent.click(bookCard);
-
+    
     expect(window.location.pathname).toBe("/book");
+    
   });
   test("render finished reading books", async () => {
     mockedAxios.get.mockResolvedValue(Promise.resolve(response));

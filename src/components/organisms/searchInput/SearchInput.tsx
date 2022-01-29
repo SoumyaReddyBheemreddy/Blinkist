@@ -25,6 +25,7 @@ export default function SearchInput() {
             </IconButton>
           ),
         }}
+        data-testid="search"
       />
     </Container>
   );

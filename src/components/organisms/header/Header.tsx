@@ -22,7 +22,7 @@ const useStyle = makeStyles({
 export default function Header() {
   const classes = useStyle();
   return (
-    <Container fixed>
+    <Container fixed data-testid="header">
       <AppBar
         position="static"
         sx={{ background: "#FFFFFF" }}

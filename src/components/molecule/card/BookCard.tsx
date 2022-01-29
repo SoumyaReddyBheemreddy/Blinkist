@@ -22,13 +22,14 @@ interface MediaCardProps {
   progress?: number;
   role: string;
   onClick?: () => void;
+  testid?:string
 }
 
 export default function BookCard(props: MediaCardProps) {
   const classes = cardStyle();
   return (
     <ThemeProvider theme={blinkistTheme}>
-      <Card className={classes.bookcard} onClick={props.onClick} data-testid="cardButton">
+      <Card className={classes.bookcard} onClick={props.onClick} data-testid={props.testid}>
         <CardActionArea disableRipple= {true} sx={{padding:"0px"}}>
           <CardMedia
             className={classes.cardmedia}

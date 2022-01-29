@@ -50,7 +50,7 @@ const MyLibrary = () => {
   const cards = (books: Book[]) => {
     return books.map((book: Book,index) => {
       return (
-        <Grid key={index} item xs={12} sm={12} md={6} lg={4}>
+        <Grid key={index} item xs={12} sm={12} md={6} lg={4} data-testid={`card-${book.role}-${book.id}`}>
           <Card
             key={book.id}
             title={book.title}
@@ -64,6 +64,7 @@ const MyLibrary = () => {
               navigate("/book?id="+book.id);
               window.scrollTo(0,0);
             }}
+            testid={`card-${book.id}`}
           />
         </Grid>
       );

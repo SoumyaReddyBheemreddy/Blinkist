@@ -12,6 +12,9 @@ import Explore from "../explore/Explore";
 import Link from "@mui/material/Link";
 import { makeStyles } from "@mui/styles";
 import { Container } from "@mui/material";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import { useAuth0 } from "@auth0/auth0-react";
 const useStyle = makeStyles({
   appBar: {
     "& .MuiToolbar-root": {
@@ -20,7 +23,17 @@ const useStyle = makeStyles({
   },
 });
 export default function Header() {
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   const classes = useStyle();
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
   return (
     <Container fixed data-testid="header">
       <AppBar
@@ -52,15 +65,56 @@ export default function Header() {
             </Link>
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: "flex" } }}>
-            <AvatarIcon children="A" />
+            {isAuthenticated && <AvatarIcon children="A" />}
             <IconButton
               size="large"
               edge="start"
               aria-label="more"
               sx={{ color: " #042330" }}
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
             >
               <ExpandMoreIcon />
             </IconButton>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              {isAuthenticated ? (
+                <MenuItem onClick={handleClose}>
+                  <Link
+                    underline="none"
+                    component="button"
+                    variant="body1"
+                    onClick={() => {
+                      logout({ returnTo: window.location.origin });
+                    }}
+                  >
+                    Logout
+                  </Link>
+                </MenuItem>
+              ) : (
+                <MenuItem onClick={handleClose}>
+                  <Link
+                    underline="none"
+                    component="button"
+                    variant="body1"
+                    onClick={() => {
+                      loginWithRedirect();
+                    }}
+                  >
+                    Log In
+                  </Link>
+                </MenuItem>
+              )}
+            </Menu>
           </Box>
         </Toolbar>
       </AppBar>

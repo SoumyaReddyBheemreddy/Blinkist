@@ -41,7 +41,7 @@ export default function ExploreBooks() {
   const cards = (books: Book[]) => {
     return books.map((book: Book, index) => {
       return (
-        <Grid key={index} item xs={12} sm={12} md={6} lg={4}>
+        <Grid key={index} item xs={12} sm={12} md={6} lg={4} data-testid={`card-${book.category}`}>
           <Card
             key={book.id}
             readingTime={book.readingTime}
@@ -55,6 +55,7 @@ export default function ExploreBooks() {
               navigate("/book?id=" + book.id);
               window.scrollTo(0, 0);
             }}
+            testid={`card-${book.id}`}
           />
         </Grid>
       );

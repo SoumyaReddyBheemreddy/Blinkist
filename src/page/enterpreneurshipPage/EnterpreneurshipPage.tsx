@@ -5,7 +5,7 @@ import SearchInput from "../../components/organisms/searchInput/SearchInput";
 import Footer from "../../components/organisms/footer/Footer";
 export default function EnterpreneurshipPage() {
   return (
-    <div>
+    <div data-testid="enterpreneurship page">
       <Header />
       <Banner />
       <SearchInput />

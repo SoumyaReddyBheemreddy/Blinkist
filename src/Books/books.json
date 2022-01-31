@@ -17,8 +17,8 @@
       "image": "/assets/cover_image/2.png",
       "readingTime": "13-minute read",
       "userCount": "19k reads",
+      "role": "explore",
       "progress": 100,
-      "role": "finished",
       "category": "trending blinks",
       "id": 2
     },
@@ -61,8 +61,8 @@
       "image": "/assets/cover_image/5.png",
       "readingTime": "13-minute read",
       "userCount": "2.5k reads",
-      "progress": 100,
       "role": "explore",
+      "progress": 100,
       "category": "trending blinks",
       "id": 6
     },
@@ -111,15 +111,15 @@
       "category": "just added"
     },
     {
-      "id": 11,
       "title": "Being Boss",
       "author": "Kathleen Shannon and Emily",
       "image": "/assets/cover_image/10.png",
       "readingTime": "12-minute read",
       "userCount": "1.9k reads",
+      "role": "explore",
       "progress": 100,
-      "role": "finished",
-      "category": "trending blinks"
+      "category": "trending blinks",
+      "id": 11
     }
   ]
 }

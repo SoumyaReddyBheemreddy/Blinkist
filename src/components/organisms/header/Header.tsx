@@ -15,6 +15,7 @@ import { Container } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useAuth0 } from "@auth0/auth0-react";
+import axios from "axios";
 const useStyle = makeStyles({
   appBar: {
     "& .MuiToolbar-root": {
@@ -22,6 +23,17 @@ const useStyle = makeStyles({
     },
   },
 });
+interface Book {
+  id: number;
+  title: string;
+  author: string;
+  image: string;
+  readingTime: string;
+  userCount: string;
+  progress?: number;
+  role: string;
+  category: string;
+}
 export default function Header() {
   const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
   const classes = useStyle();
@@ -33,7 +45,27 @@ export default function Header() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
+  const handleLogoutClick = async () => {
+    const response = await axios.get(
+      "http://localhost:8086/books?role=finished"
+    );
+    const results = await response.data;
+    console.log(results);
+    
+    results.map(async (book: Book) => {
+      await axios.put("http://localhost:8086/books/" + book.id, {
+        title: book.title,
+        author: book.author,
+        image: book.image,
+        readingTime: book.readingTime,
+        userCount: book.userCount,
+        role: "explore",
+        progress:book.progress,
+        category: book.category,
+      });
+    });
+    logout({ returnTo: window.location.origin });
+  };
   return (
     <Container fixed data-testid="header">
       <AppBar
@@ -93,9 +125,7 @@ export default function Header() {
                     underline="none"
                     component="button"
                     variant="body1"
-                    onClick={() => {
-                      logout({ returnTo: window.location.origin });
-                    }}
+                    onClick={handleLogoutClick}
                   >
                     Logout
                   </Link>
